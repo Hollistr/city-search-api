@@ -10,7 +10,7 @@ const cors = require('cors');
 
 const axios = require('axios');
 
-const { response } = require('express');
+// const { response } = require('express');
 
 // import modules
 const getMovies = require('./modules/movies.js');
