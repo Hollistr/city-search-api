@@ -14,7 +14,7 @@ const { response } = require('express');
 
 // import modules
 const getMovies = require('./modules/movies.js');
-const getWeather = require('./modules/weather');
+const getWeather = require('./modules/weather.js');
 // load data
 const data = require('./data/data.json');
 
@@ -31,8 +31,8 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Listening on Port ${PORT}`));
 
 // endpoint
-app.get('/weather', searchWeather);
-app.get('/movies', searchMovies);
+app.get('/weather', getWeather);
+app.get('/movies', getMovies);
 
 // catch all endpoint
 app.get('/', (req, res) => {
